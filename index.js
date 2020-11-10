@@ -16,7 +16,7 @@ client.on('message', async message => {
       message.reply('Max time limit is 15 minutes (or 900 seconds)');
       return
     }
-    console.log(`starting timer of ${args[0]} seconds `);
+    message.reply(`starting timer of ${args[0]} seconds `);
     setTimeout(() => { playSound(message) }, args[0] * 1000);
   }
 });
